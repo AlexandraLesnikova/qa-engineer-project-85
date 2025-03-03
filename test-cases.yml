@@ -108,6 +108,23 @@
     Ошибка: "EMAIL_NOT_FOUND"
 
 - summary: |
+    Восстановление пароля через email
+  requirement: |
+    Возможность восстановления пароля 
+  prerequisites: |
+    Открыта страница логина
+  test-data: |
+    Логин = aleks.halyova@yandex.ru
+  steps:
+    - Нажать кнопку Sign In
+    - Нажать ссылку Forgot your password?
+    - вводим email aleks.halyova@yandex.ru
+    - нажать Submit
+  expected-result: |
+    на указанную почту поступила ссылка для восстановления пароля
+
+
+- summary: |
     Проверка создания новой игры
   requirement: |
     Пользователь должен иметь возможность создать новую игру с указанием параметров
