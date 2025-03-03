@@ -24,6 +24,10 @@
   status: pass
 
 - summary: |
+    Восстановление пароля через email
+ status: pass
+ 
+- summary: |
     Проверка создания новой игры
   status: pass
 
