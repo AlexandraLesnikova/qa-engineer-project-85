@@ -98,7 +98,7 @@
   prerequisites: |
     Открыта страница логина
   test-data: |
-    Логин = aleks.halyova@yandex.ru
+    Логин = Lesnicova@mail.ru
     Пароль = Q12345
   steps:
     - Вводим логин
