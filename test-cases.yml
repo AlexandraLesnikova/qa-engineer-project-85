@@ -6,9 +6,7 @@
   prerequisites: |
     Открыта страница регистрации
   test-data: |
-    Nickname = Klone22
-    Пароль = S12345678
-    Email = aleks.halyova@yandex.ru
+    no data
   steps:
     - Вводим Nickname
     - Вводим Email
