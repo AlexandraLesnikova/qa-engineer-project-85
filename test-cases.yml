@@ -137,7 +137,6 @@
   prerequisites: |
     - Пользователь 1 авторизован в системе (логин: LesnikovaAlex@gmail.com)
     - Пользователь 2 авторизован в системе (логин: lala@list.ru)
-    - Оба пользователя находятся в активном состоянии и имеют доступ к функционалу создания игры
   test-data: |
     Level: Easy
     Game Type: With a Friend
@@ -155,10 +154,10 @@
             - Choose opponent: KLONE
             - Choose task by name or tags: Random task
             - Tags: hash-maps
-        - Нажать кнопку "Create invite"
+        - Нажать кнопку Create invite
     - Пользователь 2:
         - Проверить наличие всплывающего уведомления с приглашением от Пользователя 1
-        - Нажать кнопку "Accept" в уведомлении
+        - Нажать кнопку Accept в уведомлении
   expected-result: |
     Новая игра с другом успешно создана
 
