@@ -1,32 +1,32 @@
 ---
 - summary: |
     Проверка регистрации пользователя
-  requirement: |
+requirement: |
     При верном вводе данных пользователь должен зарегистрироваться в системе
-  prerequisites: |
+prerequisites: |
     Открыта страница регистрации
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
     - Вводим Nickname
     - Вводим Email
     - Вводим пароль
     - Вводим подтверждение пароля
     - Нажимаем кнопку "Submit"
-  expected-result: |
+expected-result: |
     Пользователь успешно зарегистрирован
  
 - summary: |
     Проверка регистрации зарегистрированного пользователя
-  requirement: |
+requirement: |
     Система не должна позволить зарегистрировать нового пользователя
-  prerequisites: |
+prerequisites: |
     Открыта страница регистрации
-  test-data: |
+test-data: |
     Nickname = Klone
     Пароль = S12345678
     Email = LesnikovaAlex@gmail.com
-  steps:
+steps:
     - Вводим Nickname
     - Вводим Email
     - Вводим пароль
@@ -37,15 +37,15 @@
 
 - summary: |
     Проверка регистрации зарегистрированного пользователя
-  requirement: |
+requirement: |
     Система не должна позволить зарегистрировать нового пользователя
-  prerequisites: |
+prerequisites: |
     Открыта страница регистрации
-  test-data: |
+test-data: |
     Nickname = Klone
     Пароль = Q12345
     Email = aleks.halyova@yandex.ru
-  steps:
+steps:
     - Вводим Nickname
     - Вводим Email
     - Вводим пароль
@@ -56,30 +56,30 @@
 
 - summary: |
     Проверка авторизации пользователя
-  requirement: |
+requirement: |
     При верном вводе логина и пароля пользователь должен войти в систему
-  prerequisites: |
+prerequisites: |
     Открыта страница логина
-  test-data: |
+test-data: |
     Логин = lala@list.ru
     Пароль = S12345678
-  steps:
+steps:
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку "Войти"
-  expected-result: |
+expected-result: |
     Пользователь успешно авторизовался в системе
 
 - summary: |
     Проверка входа пользователя с несуществующими логином и паролем
-  requirement: |
+requirement: |
     При неправильном логине или пароле пользователь должен получить сообщение об ошибке
-  prerequisites: |
+prerequisites: |
     Открыта страница логина
-  test-data: |
+test-data: |
     Логин = Lesnicova@mail.ru
     Пароль = Q12345
-  steps:
+steps:
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку "Войти"
@@ -88,53 +88,53 @@
 
 - summary: |
     Восстановление пароля через email
-  requirement: |
+requirement: |
     Возможность восстановления пароля 
-  prerequisites: |
+prerequisites: |
     Открыта страница логина
-  test-data: |
+test-data: |
     Логин = aleks.halyova@yandex.ru
     no data
-  steps:
+steps:
     - Нажать кнопку Sign In
     - Нажать ссылку Forgot your password?
     - вводим email aleks.halyova@yandex.ru
     - нажать Submit
-  expected-result: |
+expected-result: |
     на указанную почту поступила ссылка для восстановления пароля
 
 - summary: |
     Проверка создания проверка создания игры с ботом
-  requirement: |
+requirement: |
     Пользователь должен иметь возможность создать новую игру с указанием параметров
-  prerequisites: |
+prerequisites: |
     Пользователь авторизован в системе
-  test-data: |
+test-data: |
     Level = легкий
     Game Type = With a Bot
     Time control = 8 min
     Choose task by name or tags = random task
     Tags = math
-  steps:
+steps:
     - Нажать кнопку "Create battle"
-  expected-result: |
+expected-result: |
     Игра успешно создана
 
 - summary: |
     Проверка подключения к существующему баттлу
-  requirement: |
+requirement: |
     Пользователь должен иметь возможность подключиться к существующему баттлу
-  prerequisites: |
+prerequisites: |
     Пользователь авторизован в системе
     Открыта главная страница Codebattle со списком баттлов
-  test-data: |
+test-data: |
     no data  
-  steps:
+steps:
     - В списке баттлов нажать кнопку "Show"
-  expected-result: |
+expected-result: |
     Пользователь подключен к активной игре
 
-summary: |
+- summary: |
   Проверка создания игры с пользователем системы
 requirement: |
   Пользователь должен иметь возможность создать новую игру с любым пользователем системы
@@ -168,32 +168,32 @@ expected-result: |
     
 - summary: |
     Проверка создания приглашения на баттл с любым пользователем
-  requirement: |
+requirement: |
     Пользователь должен иметь возможность создать новую игру с пользователем системы
-  prerequisites: |
+prerequisites: |
     - Пользователь авторизован в системе
-  test-data: |
+test-data: |
     Level: medium
     Game Type: With a Other User
     Time control: 8 min
     Choose task by name or tags: random task
     Tags: strings
-  steps:
+steps:
     - Нажать кнопку "Create battle"
-  expected-result: |
+expected-result: |
     На вкладке "Lobby" в списке напротив текущего пользователя отобразится бейдж Rating и кнопка "Continue"
 
 - summary: |
     Проверка создания новой игры с пользователем системы
-  requirement: |
+requirement: |
     Пользователь должен иметь возможность создать новую игру с пользователем системы
-  prerequisites: |
+prerequisites: |
     - Пользователь авторизован в системе
     - Открыта стартовая страница, вкладка "Lobby", список пользователей
-  test-data: |
+test-data: |
     Пользователь с бейджем Rating
-  steps:
+steps:
     - Выбрать пользователя с бейджем Rating
     - Нажать на кнопку "Fight"
-  expected-result: |
+expected-result: |
     Запустится игра: отображаются редакторы кода участников, счетчик времени и окно чата
