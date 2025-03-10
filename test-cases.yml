@@ -127,6 +127,8 @@
   prerequisites: |
     Пользователь авторизован в системе
     Открыта главная страница Codebattle со списком баттлов
+  test-data: |
+    no data  
   steps:
     - В списке баттлов нажать кнопку "Show"
   expected-result: |
