@@ -149,8 +149,8 @@
     Choose task by name or tags: random task
     Tags: hash-maps
   steps:
-    - Пользователь 1: Нажать кнопку "Create invite"
-    - Пользователь 2: В всплывающем окне кнопки invite нажать кнопку "Accept"
+    - Пользователь 1: Нажать кнопку Create invite
+    - Пользователь 2: В всплывающем окне кнопки invite нажать кнопку Accept
   expected-result: |
     Новая игра с другом создана
     
