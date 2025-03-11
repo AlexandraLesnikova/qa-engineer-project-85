@@ -21,7 +21,7 @@
 
 - summary: |
     Восстановление пароля
- status: pass
+  status: pass
  
 - summary: |
     Проверка создания новой игры с ботом
