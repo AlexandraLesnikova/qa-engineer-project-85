@@ -115,7 +115,7 @@
     Choose task by name or tags: random task
     Tags: math
   steps:
-    - Нажать кнопку "Create battle"
+    - Нажать кнопку "Create a game"
   expected-result: |
     Игра успешно создана
 
@@ -137,7 +137,7 @@
   requirement: |
     Пользователь должен иметь возможность создать новую игру с любым пользователем системы
   prerequisites: |
-    - Пользователь 1 авторизован в системе (логин: LesnikovaAlex@gmail.com)
+    - Пользователь 1 авторизован в системе (логин: aleks.halyova@yandex.ru)
     - Пользователь 2 авторизован в системе (логин: lala@list.ru)
   test-data: |
     Level: Easy
@@ -147,19 +147,10 @@
     Choose task by name or tags: Random task
     Tags: hash-maps
   steps:
-    - Пользователь 1:
-        - Перейти на страницу создания игры
-        - Выбрать параметры игры:
-            - Level: Easy
-            - Game Type: With a Friend
-            - Time control: 8 min
-            - Choose opponent: KLONE
-            - Choose task by name or tags: Random task
-            - Tags: hash-maps
-        - Нажать кнопку Create invite
-    - Пользователь 2:
-        - Проверить наличие всплывающего уведомления с приглашением от Пользователя 1
-        - Нажать кнопку Accept в уведомлении
+    - Пользователь 1: нажать на кнопку Create a game
+    - Пользователь 1: задать параметры игры
+    - Пользователь 1: нажать кнопку Create invite
+    - Пользователь 2: в всплывающем окне уведомления Invate нажать кнопку Accept
   expected-result: |
     Новая игра с другом успешно создана
 
@@ -176,21 +167,8 @@
     Choose task by name or tags: random task
     Tags: strings
   steps:
-    - Нажать кнопку "Create battle"
+    - Нажать кнопку Create a game
+    - Задать параметры игры
+    - Нажать кнопку Create battle 
   expected-result: |
     На вкладке "Lobby" в списке напротив текущего пользователя отобразится бейдж Rating и кнопка "Continue"
-
-- summary: |
-    Проверка создания новой игры с пользователем системы
-  requirement: |
-    Пользователь должен иметь возможность создать новую игру с пользователем системы
-  prerequisites: |
-    - Пользователь авторизован в системе
-    - Открыта стартовая страница, вкладка "Lobby", список пользователей
-  test-data: |
-    Пользователь с бейджем Rating
-  steps:
-    - Выбрать пользователя с бейджем Rating
-    - Нажать на кнопку "Fight"
-  expected-result: |
-    Запустится игра: отображаются редакторы кода участников, счетчик времени и окно чата
