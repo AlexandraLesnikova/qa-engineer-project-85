@@ -95,7 +95,7 @@
   steps:
     - Нажать кнопку "Sign In"
     - Нажать ссылку "Forgot your password?"
-    - Вводим email: aleks.halyova@yandex.ru
+    - Вводим email aleks.halyova@yandex.ru
     - Нажать "Submit"
     - Перейти по ссылке, полученной в письме
     - Задать новый пароль, например W123456
