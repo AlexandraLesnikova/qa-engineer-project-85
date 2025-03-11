@@ -91,11 +91,12 @@
     Возможность восстановления пароля
   prerequisites: |
     Открыта страница логина
-  test-data: no data
+  test-data: | 
+    email: aleks.halyova@yandex.ru
   steps:
     - Нажать кнопку "Sign In"
     - Нажать ссылку "Forgot your password?"
-    - Вводим email aleks.halyova@yandex.ru
+    - Вводим email 
     - Нажать "Submit"
     - Перейти по ссылке, полученной в письме
     - Задать новый пароль, например W123456
